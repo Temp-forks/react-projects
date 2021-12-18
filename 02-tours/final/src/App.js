@@ -26,9 +26,11 @@ function App() {
       console.log(error)
     }
   }
+
   useEffect(() => {
     fetchTours()
   }, [])
+
   if (loading) {
     return (
       <main>
@@ -36,6 +38,7 @@ function App() {
       </main>
     )
   }
+
   if (tours.length === 0) {
     return (
       <main>
@@ -48,6 +51,7 @@ function App() {
       </main>
     )
   }
+  
   return (
     <main>
       <Tours tours={tours} removeTour={removeTour} />
