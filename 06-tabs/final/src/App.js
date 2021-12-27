@@ -14,9 +14,11 @@ function App() {
     setJobs(newJobs)
     setLoading(false)
   }
+
   useEffect(() => {
     fetchJobs()
   }, [])
+
   if (loading) {
     return (
       <section className="section loading">
@@ -24,7 +26,9 @@ function App() {
       </section>
     )
   }
+
   const { company, dates, duties, title } = jobs[value]
+  
   return (
     <section className="section">
       <div className="title">
